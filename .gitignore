@@ -1,0 +1,12 @@
+VR_Test/Project/VR_Test/.vs/
+VR_Test/Project/VR_Test/Assembly-CSharp.csproj
+VR_Test/Project/VR_Test/Assembly-CSharp-Editor.csproj
+VR_Test/Project/VR_Test/Unity.TextMeshPro.csproj
+VR_Test/Project/VR_Test/Unity.TextMeshPro.Editor.csproj
+VR_Test/Project/VR_Test/Unity.PackageManagerUI.Editor.csproj
+VR_Test/Project/VR_Test/Unity.CollabProxy.Editor.csproj
+VR_Test/Project/VR_Test/Unity.Analytics.DataPrivacy.csproj
+VR_Test/Project/VR_Test/Library/
+VR_Test/Project/VR_Test/Temp/
+VR_Test/Project/VR_Test/obj/
+VR_Test/Project/VR_Test/VR_Test.sln
