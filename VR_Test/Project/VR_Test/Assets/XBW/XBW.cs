@@ -4,17 +4,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class XBW : MonoBehaviour , IPointerEnterHandler
+public class XBW : MonoBehaviour
 {
-    private MeshRenderer m_MeshRender;
 
     void Awake()
     {
-        m_MeshRender = transform.GetComponent<MeshRenderer>();
     }
     // Start is called before the first frame update
     void Start()
     {
+        var canvas = GetComponent<Canvas>();
+        Vector2 p = new Vector2(Screen.width / 2.0f, Screen.height / 2.0f);
+        p = new Vector2(-1000, -10000);
+        var allGraphics = GraphicRegistry.GetGraphicsForCanvas(canvas);
+        for(int i = 0;i<allGraphics.Count;i++) {
+            var g = allGraphics[i];
+            bool con = RectTransformUtility.RectangleContainsScreenPoint(g.rectTransform, p, Camera.main);
+            Debug.LogError(g.Raycast(p, Camera.main) + "  " + g.name+" "+con);
+
+        }
     }
 
     // Update is called once per frame
@@ -22,8 +30,5 @@ public class XBW : MonoBehaviour , IPointerEnterHandler
     {
         
     }
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        m_MeshRender.material.color = Color.green;
-    }
+  
 }
